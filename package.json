@@ -1,0 +1,23 @@
+{
+  "name": "det",
+  "version": "1.0.0",
+  "description": "utilities for every day use",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmclau14/det.git"
+  },
+  "keywords": [
+    "utilities",
+    "functional"
+  ],
+  "author": "Michael McLaughlin <michael@gospecless.com> (https://gospecless.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmclau14/det/issues"
+  },
+  "homepage": "https://github.com/mmclau14/det#readme"
+}

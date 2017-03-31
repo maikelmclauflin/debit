@@ -1,0 +1,1 @@
+module.exports = require('./utils/is/type-wrap')('Function');
