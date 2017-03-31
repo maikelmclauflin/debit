@@ -1,5 +1,11 @@
+module.exports = compact;
 var filter = require('./utils/array/filter');
-var isValue = require('./utils/is/value');
-module.exports = function compact(list) {
-    return filter(list, isValue);
-};
+var isNil = require('./utils/is/nil');
+
+function compact(list) {
+    return filter(list, isNotNil);
+}
+
+function isNotNil(item) {
+    return !isNil(item);
+}

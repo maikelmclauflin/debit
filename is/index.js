@@ -26,6 +26,7 @@ module.exports = {
     of: require('./of'),
     promise: require('./promise'),
     regExp: require('./reg-exp'),
+    same: require('./same'),
     strictlyEqual: require('./strictly-equal'),
     string: require('./string'),
     symbol: require('./symbol'),

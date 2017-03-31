@@ -1,7 +1,7 @@
 var lastIs = require('./utils/array/last-is');
 var toPath = require('./utils/to/path');
 var isArray = require('./utils/is/array');
-var dropRight = require('./utils/array/drop-right');
+var dropRight = require('./utils/array/head');
 var find = require('./utils/array/find');
 module.exports = function (path, fn, object) {
     var list = path;

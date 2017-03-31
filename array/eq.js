@@ -1,4 +1,4 @@
-// var REG_EXP = 'RegExp';
+module.exports = eq;
 var CONSTRUCTOR = 'constructor';
 var keys = require('./utils/object/keys');
 var objectToString = require('./utils/function/object-to-string');
@@ -11,8 +11,6 @@ var isStrictlyEqual = require('./utils/is/strictly-equal');
 var isObject = require('./utils/is/object');
 var has = require('./utils/object/has');
 // Internal recursive comparison function for `isEqual`
-module.exports = eq;
-
 function eq(a, b, aStack, bStack) {
     var className, areArrays, aCtor, bCtor, length, objKeys, key, aNumber, bNumber;
     // Identical objects are equal. `0 === -0`, but they aren't identical.

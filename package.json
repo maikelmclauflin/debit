@@ -4,7 +4,7 @@
     "description": "utilities for every day use",
     "main": "index.js",
     "scripts": {
-        "test": "nodemon index.test.js"
+        "test": "nodemon _index.test.js"
     },
     "repository": {
         "type": "git",
@@ -16,5 +16,8 @@
     "bugs": {
         "url": "https://github.com/mmclau14/debit/issues"
     },
-    "homepage": "https://github.com/mmclau14/debit#readme"
+    "homepage": "https://github.com/mmclau14/debit#readme",
+    "devDependencies": {
+        "batterie": "^1.0.18"
+    }
 }
