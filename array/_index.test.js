@@ -18,3 +18,7 @@ require('./first-is.test');
 require('./first.test');
 require('./gather.test');
 require('./head.test');
+require('./item-is.test');
+require('./last-is.test');
+require('./last.test');
+require('./nth-is.test');
