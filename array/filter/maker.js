@@ -6,4 +6,6 @@ var returnsArray = require('./utils/returns/array');
 var arrayPush = require('./utils/array/push');
 var filterCommon = require('./utils/array/filter/common');
 var negatableFilter = require('./utils/array/filter/negatable');
-module.exports = negatableFilter(filterCommon(returnsArray, arrayPush), filterCommon(returnsObject, objectSet), filterCommon(returnsEmptyString, stringConcat));
+module.exports = negatableFilter(filterCommon(returnsArray, function (array, item) {
+    return array.push(item);
+}), filterCommon(returnsObject, objectSet), filterCommon(returnsEmptyString, stringConcat));

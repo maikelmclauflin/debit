@@ -22,3 +22,6 @@ require('./item-is.test');
 require('./last-is.test');
 require('./last.test');
 require('./nth-is.test');
+require('./nth.test');
+require('./push.test');
+require('./results.test');
