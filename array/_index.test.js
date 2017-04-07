@@ -25,3 +25,6 @@ require('./nth-is.test');
 require('./nth.test');
 require('./push.test');
 require('./results.test');
+require('./slice.test');
+require('./split.test');
+require('./zip.test');

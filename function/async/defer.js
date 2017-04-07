@@ -7,7 +7,7 @@ module.exports = function defer(fn, time, context) {
         clearTimeout(id);
         id = setTimeout(function deferTimer() {
             fn.apply(context, args);
-        });
+        }, time);
         return id;
     };
 };

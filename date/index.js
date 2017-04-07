@@ -1,3 +1,5 @@
-module.exports = function date() {
+module.exports = date;
+
+function date() {
     return new Date();
-};
+}
