@@ -1,23 +1,26 @@
 {
-    "name": "debit",
-    "version": "1.0.1",
-    "description": "utilities for every day use",
-    "main": "index.js",
-    "scripts": {
-        "test": "nodemon --delay 0.1 _index.test.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mmclau14/debit.git"
-    },
-    "keywords": ["utilities", "functional"],
-    "author": "Michael McLaughlin <michael@gospecless.com> (https://gospecless.com)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/mmclau14/debit/issues"
-    },
-    "homepage": "https://github.com/mmclau14/debit#readme",
-    "devDependencies": {
-        "batterie": "^1.0.18"
-    }
+  "name": "debit",
+  "version": "1.0.2",
+  "description": "utilities for every day use",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --delay 0.1 _index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmclau14/debit.git"
+  },
+  "keywords": [
+    "utilities",
+    "functional"
+  ],
+  "author": "Michael McLaughlin <michael@gospecless.com> (https://gospecless.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmclau14/debit/issues"
+  },
+  "homepage": "https://github.com/mmclau14/debit#readme",
+  "devDependencies": {
+    "batterie": "^1.0.18"
+  }
 }
