@@ -1,5 +1,5 @@
-var PROTO = '__proto__';
 module.exports = Object.create || (Object.create = (function (undefined) {
+    var PROTO = '__proto__';
     var TMP = function () {};
     return function (prototype, propertiesObject) {
         if (prototype !== Object(prototype) && prototype !== null) {

@@ -8,4 +8,6 @@ require('./call-method.test');
 require('./convert-second-to-iterable.test');
 require('./do-try.test');
 require('./evaluate.test');
+require('./extend.test');
+require('./factory.test');
 require('./wrap-try.test');
