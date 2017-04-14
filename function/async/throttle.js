@@ -9,14 +9,15 @@ module.exports = function throttle(fn, threshold, scope) {
         var context = scope || this,
             _now = now(),
             args = arguments;
+        clearTimeout(deferTimer);
         if (last && _now < last + threshold) {
             // hold on to it
-            clearTimeout(deferTimer);
-            deferTimer = setTimeout(function throttleTimer() {
-                last = _now;
-                fn.apply(context, args);
-            }, threshold);
+            deferTimer = setTimeout(throttled, threshold);
         } else {
+            throttled();
+        }
+
+        function throttled() {
             last = _now;
             fn.apply(context, args);
         }

@@ -1,3 +1,5 @@
-module.exports = function callMethod(isStr, method, context, argument) {
-    return isStr ? obj[method](argument) : method.call(context, argument);
-};
+module.exports = callMethod;
+
+function callMethod(isStr, method, context, argument) {
+    return isStr ? context[method](argument) : method.call(context, argument);
+}

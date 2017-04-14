@@ -1,1 +1,11 @@
 require('./async/_index.test');
+require('./cacheable/_index.test');
+require('./bind-to.test');
+require('./bind-with.test');
+require('./bind.test');
+require('./block-wrapper.test');
+require('./call-method.test');
+require('./convert-second-to-iterable.test');
+require('./do-try.test');
+require('./evaluate.test');
+require('./wrap-try.test');

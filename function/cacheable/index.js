@@ -1,5 +1,7 @@
 var isUndefined = require('./utils/is/undefined');
-module.exports = function cacheable(fn) {
+module.exports = cacheable;
+
+function cacheable(fn) {
     var cache = {};
     return function cacheableInstance(input) {
         var value;
@@ -8,4 +10,4 @@ module.exports = function cacheable(fn) {
         }
         return value;
     };
-};
+}
