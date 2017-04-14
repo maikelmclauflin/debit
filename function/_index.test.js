@@ -10,4 +10,6 @@ require('./do-try.test');
 require('./evaluate.test');
 require('./extend.test');
 require('./factory.test');
+require('./flows.test');
+require('./negate.test');
 require('./wrap-try.test');
