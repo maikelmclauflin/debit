@@ -1,4 +1,5 @@
 var isStrictlyEqual = require('./utils/is/strictly-equal');
+var lastIndex = require('./utils/array/index/last');
 module.exports = function unwrapBlock(string_) {
     var string = string_.toString(),
         split = string.split('{'),
