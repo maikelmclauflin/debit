@@ -2,6 +2,8 @@ var b = require('batterie');
 var tail = require('./tail');
 var list = [1, 2, 3];
 b.describe('tail', function () {
+    // console.log(tail(list));
+    // throw list;
     b.it('slices arrays', [
         ['array is required', b.curry(function () {
             return tail();

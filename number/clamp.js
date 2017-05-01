@@ -1,3 +1,4 @@
+var isNumber = require('./utils/is/number');
 module.exports = function (number, lower, upper) {
-    return number !== number ? number : (number < lower ? lower : (number > upper ? upper : number));
+    return isNumber(number) ? (number < lower ? lower : (number > upper ? upper : number)) : number;
 };
