@@ -6,4 +6,5 @@ require('./default-to/_index.test');
 require('./function/_index.test');
 require('./generator/_index.test');
 require('./is/_index.test');
+require('./JSON/_index.test');
 b.finish().then(b.logger());

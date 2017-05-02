@@ -1,8 +1,10 @@
-var isUndefined = require('./undefined');
+var isValidInteger = require('./valid-integer');
 var b = require('batterie');
-b.describe('isUndefined', function () {
-    b.expect(isUndefined, 'toBeFunction');
-    b.expect(isUndefined(), 'toBeTrue');
-    b.expect(isUndefined(null), 'toBeFalse');
-    b.expect(isUndefined(false), 'toBeFalse');
+b.describe('isValidInteger', function () {
+    b.expect(isValidInteger, 'toBeFunction');
+    b.expect(isValidInteger(), 'toBeFalse');
+    b.expect(isValidInteger(null), 'toBeFalse');
+    b.expect(isValidInteger(false), 'toBeFalse');
+    b.expect(isValidInteger(0), 'toBeTrue');
+    b.expect(isValidInteger(1e10000), 'toBeFalse');
 });

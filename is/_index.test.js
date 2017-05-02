@@ -35,3 +35,6 @@ require('./true.test');
 require('./truthy.test');
 require('./type-wrap.test');
 require('./undefined.test');
+require('./valid-integer.test');
+require('./value.test');
+require('./window.test');
