@@ -3,203 +3,203 @@ module.exports = recreate();
 function recreate() {
     var FIND = 'find';
     var FIND_KEY = FIND + 'Key';
-    var buildMethods = require('./utils/function/build');
-    var isStrictlyEqual = require('./utils/is/strictly-equal');
-    var merge = require('./utils/object/merge');
-    var capitalize = require('./utils/string/capitalize');
-    var mapKeys = require('./utils/array/map/keys');
-    var returns = require('./utils/returns/passed');
-    var extend = require('./utils/object/extend');
-    var forEach = require('./utils/array/for/each');
-    var forEachRight = require('./utils/array/for/each-right');
-    var forOwn = require('./utils/object/for-own');
-    var forOwnRight = require('./utils/object/for-own-right');
-    var forIn = require('./utils/object/for-in');
-    var forInRight = require('./utils/object/for-in-right');
-    var map = require('./utils/array/map');
-    var mapRight = require('./utils/array/map/right');
-    var mapValues = require('./utils/array/map/values');
-    var mapValuesRight = require('./utils/array/map/values-right');
-    var mapKeysRight = require('./utils/array/map/keys-right');
-    var find = require('./utils/array/find');
-    var findRight = require('./utils/array/find/right');
-    var findIn = require('./utils/array/find/in');
-    var findInRight = require('./utils/array/find/in-right');
-    var findOwn = require('./utils/array/find/own');
-    var findOwnRight = require('./utils/array/find/own-right');
-    var findKey = require('./utils/array/find/key');
-    var findKeyIn = require('./utils/array/find/key/in');
-    var findKeyInRight = require('./utils/array/find/key/in-right');
-    var findKeyOwn = require('./utils/array/find/key/own');
-    var findKeyOwnRight = require('./utils/array/find/key/own-right');
-    var findKeyRight = require('./utils/array/find/key/right');
-    var reduce = require('./utils/array/reduce');
-    var reduceRight = require('./utils/array/reduce/right');
-    var filter = require('./utils/array/filter');
-    var filterRight = require('./utils/array/filter/right');
-    var filterNegative = require('./utils/array/filter/negative');
-    var filterNegativeRight = require('./utils/array/filter/negative-right');
-    var doTry = require('./utils/function/do-try');
+    var buildMethods = require('function/build');
+    var isStrictlyEqual = require('is/strictly-equal');
+    var merge = require('object/merge');
+    var capitalize = require('string/capitalize');
+    var mapKeys = require('array/map/keys');
+    var returns = require('returns/passed');
+    var extend = require('object/extend');
+    var forEach = require('array/for/each');
+    var forEachRight = require('array/for/each-right');
+    var forOwn = require('object/for-own');
+    var forOwnRight = require('object/for-own-right');
+    var forIn = require('object/for-in');
+    var forInRight = require('object/for-in-right');
+    var map = require('array/map');
+    var mapRight = require('array/map/right');
+    var mapValues = require('array/map/values');
+    var mapValuesRight = require('array/map/values-right');
+    var mapKeysRight = require('array/map/keys-right');
+    var find = require('array/find');
+    var findRight = require('array/find/right');
+    var findIn = require('array/find/in');
+    var findInRight = require('array/find/in-right');
+    var findOwn = require('array/find/own');
+    var findOwnRight = require('array/find/own-right');
+    var findKey = require('array/find/key');
+    var findKeyIn = require('array/find/key/in');
+    var findKeyInRight = require('array/find/key/in-right');
+    var findKeyOwn = require('array/find/key/own');
+    var findKeyOwnRight = require('array/find/key/own-right');
+    var findKeyRight = require('array/find/key/right');
+    var reduce = require('array/reduce');
+    var reduceRight = require('array/reduce/right');
+    var filter = require('array/filter');
+    var filterRight = require('array/filter/right');
+    var filterNegative = require('array/filter/negative');
+    var filterNegativeRight = require('array/filter/negative-right');
+    var doTry = require('function/do-try');
     var cases = {
-        kebab: require('./utils/string/case/kebab'),
-        camel: require('./utils/string/case/camel'),
-        lower: require('./utils/string/case/lower'),
-        snake: require('./utils/string/case/snake'),
-        upper: require('./utils/string/case/upper')
+        kebab: require('string/case/kebab'),
+        camel: require('string/case/camel'),
+        lower: require('string/case/lower'),
+        snake: require('string/case/snake'),
+        upper: require('string/case/upper')
     };
-    var returnsHash = require('./utils/returns/passed');
-    var to = require('./utils/to');
-    var is = require('./utils/is');
+    var returnsHash = require('returns/passed');
+    var to = require('to');
+    var is = require('is');
     return extend([{
             recreate: recreate,
             to: to,
             merge: merge,
             case: cases,
-            is0: require('./utils/is/0'),
+            is0: require('is/0'),
             is: merge(isStrictlyEqual, is),
-            cacheable: require('./utils/function/cacheable'),
-            categoricallyCacheable: require('./utils/function/cacheable/categorically'),
-            castBoolean: require('./utils/boolean/cast'),
-            nonEnumerableProps: require('./utils/object/non-enumerable-props'),
-            callObjectToString: require('./utils/function/object-to-string'),
-            eq: require('./utils/array/eq'),
-            concat: require('./utils/array/concat'),
-            concatUnique: require('./utils/array/concat/unique'),
-            flatten: require('./utils/array/flatten'),
-            flattenDeep: require('./utils/array/flatten/deep'),
-            flattenSelectively: require('./utils/array/flatten/selectively'),
-            lastIndex: require('./utils/array/index/last'),
-            possibleIndex: require('./utils/array/index/possible'),
-            indexOf: require('./utils/array/index/of'),
-            indexOfNan: require('./utils/array/index/of/nan'),
-            indexOfRight: require('./utils/array/index/of/right'),
-            indexOfNanRight: require('./utils/array/index/of/nan-right'),
-            sortedIndexOf: require('./utils/array/index/of/sorted'),
-            smartIndexOf: require('./utils/array/index/of/smart'),
-            sort: require('./utils/array/sort'),
-            sortBy: require('./utils/array/sort/by'),
-            uniqueWith: require('./utils/array/unique/with'),
-            console: require('./utils/console'),
-            chunk: require('./utils/array/chunk'),
-            compact: require('./utils/array/compact'),
-            contains: require('./utils/array/contains'),
-            drop: require('./utils/array/tail'),
-            dropRight: require('./utils/array/head'),
-            firstIs: require('./utils/array/first-is'),
-            first: require('./utils/array/first'),
-            gather: require('./utils/array/gather'),
-            head: require('./utils/array/head'),
-            itemIs: require('./utils/array/item-is'),
-            join: require('./utils/array/join'),
-            lastIs: require('./utils/array/last-is'),
-            last: require('./utils/array/last'),
-            nthIs: require('./utils/array/nth-is'),
-            nth: require('./utils/array/nth'),
-            push: require('./utils/array/push'),
-            results: require('./utils/array/results'),
-            slice: require('./utils/array/slice'),
-            split: require('./utils/array/split'),
-            zip: require('./utils/array/zip'),
-            toggle: require('./utils/boolean/toggle'),
-            dateOffset: require('./utils/date/offset'),
-            date: require('./utils/date'),
-            now: require('./utils/date/now'),
-            dateParse: require('./utils/date/current-zone/parse'),
-            defaultTo1: require('./utils/default-to/1'),
-            defer: require('./utils/function/async/defer'),
-            throttle: require('./utils/function/async/throttle'),
-            bindTo: require('./utils/function/bind-to'),
-            bindWith: require('./utils/function/bind-with'),
-            bind: require('./utils/function/bind'),
-            evaluate: require('./utils/function/evaluate'),
-            extendConstructor: require('./utils/function/extend'),
-            factory: require('./utils/function/factory'),
-            flows: require('./utils/function/flows'),
-            once: require('./utils/function/once'),
-            result: require('./utils/function/result'),
-            reverseParams: require('./utils/function/reverse-params'),
-            whilst: require('./utils/function/whilst'),
-            wrapper: require('./utils/function/wrapper'),
-            wraptry: require('./utils/function/wrap-try'),
-            objectGenerator: require('./utils/generator/keys'),
-            arrayGenerator: require('./utils/generator'),
-            iterateOverPath: require('./utils/iterate/over-path'),
-            iterateIn: require('./utils/iterate/in'),
-            iterateOwn: require('./utils/iterate/own'),
-            couldBeJSON: require('./utils/JSON/could-be'),
-            cloneJSON: require('./utils/JSON/clone'),
-            parseJSON: require('./utils/JSON/parse'),
-            stringifyJSON: require('./utils/JSON/stringify'),
-            keys: require('./utils/object/keys'),
-            allKeys: require('./utils/object/keys/all'),
-            euclideanDistance: require('./utils/number/euclidean-distance'),
-            euclideanDistanceOrigin: require('./utils/number/euclidean-distance/origin'),
-            greaterThan0: require('./utils/number/greater-than/0'),
-            clamp: require('./utils/number/clamp'),
-            floatToInteger: require('./utils/number/float-to-integer'),
-            maxInteger: require('./utils/number/max-integer'),
-            maxSafeInteger: require('./utils/number/max-safe-integer'),
-            roundFloat: require('./utils/number/round-float'),
-            safeInteger: require('./utils/number/safe-integer'),
-            under1: require('./utils/number/under1'),
-            withinRange: require('./utils/number/within-range'),
-            mergeWithDeepCustomizer: require('./utils/object/merge/with-deep-customizer'),
-            mergeWithShallowCustomizer: require('./utils/object/merge/with-shallow-customizer'),
-            mergeWith: require('./utils/object/merge/with'),
-            at: require('./utils/object/at'),
-            clone: require('./utils/object/clone'),
-            create: require('./utils/object/create'),
-            extend: require('./utils/object/extend'),
-            fromPairs: require('./utils/object/from-pairs'),
-            get: require('./utils/object/get'),
-            has: require('./utils/object/has'),
-            intendedApi: require('./utils/object/intended-api'),
-            intendedIteration: require('./utils/object/intended-iteration'),
-            intendedObject: require('./utils/object/intended'),
-            invert: require('./utils/object/invert'),
-            set: require('./utils/object/set'),
-            stringify: require('./utils/object/stringify'),
-            values: require('./utils/object/values'),
-            passesFirst: require('./utils/passes/first'),
-            passesSecond: require('./utils/passes/second'),
-            performance: require('./utils/performance'),
-            performanceNow: require('./utils/performance/now'),
+            cacheable: require('function/cacheable'),
+            categoricallyCacheable: require('function/cacheable/categorically'),
+            castBoolean: require('boolean/cast'),
+            nonEnumerableProps: require('object/non-enumerable-props'),
+            callObjectToString: require('function/object-to-string'),
+            eq: require('array/eq'),
+            concat: require('array/concat'),
+            concatUnique: require('array/concat/unique'),
+            flatten: require('array/flatten'),
+            flattenDeep: require('array/flatten/deep'),
+            flattenSelectively: require('array/flatten/selectively'),
+            lastIndex: require('array/index/last'),
+            possibleIndex: require('array/index/possible'),
+            indexOf: require('array/index/of'),
+            indexOfNan: require('array/index/of/nan'),
+            indexOfRight: require('array/index/of/right'),
+            indexOfNanRight: require('array/index/of/nan-right'),
+            sortedIndexOf: require('array/index/of/sorted'),
+            smartIndexOf: require('array/index/of/smart'),
+            sort: require('array/sort'),
+            sortBy: require('array/sort/by'),
+            uniqueWith: require('array/unique/with'),
+            console: require('console'),
+            chunk: require('array/chunk'),
+            compact: require('array/compact'),
+            contains: require('array/contains'),
+            drop: require('array/tail'),
+            dropRight: require('array/head'),
+            firstIs: require('array/first-is'),
+            first: require('array/first'),
+            gather: require('array/gather'),
+            head: require('array/head'),
+            itemIs: require('array/item-is'),
+            join: require('array/join'),
+            lastIs: require('array/last-is'),
+            last: require('array/last'),
+            nthIs: require('array/nth-is'),
+            nth: require('array/nth'),
+            push: require('array/push'),
+            results: require('array/results'),
+            slice: require('array/slice'),
+            split: require('array/split'),
+            zip: require('array/zip'),
+            toggle: require('boolean/toggle'),
+            dateOffset: require('date/offset'),
+            date: require('date'),
+            now: require('date/now'),
+            dateParse: require('date/current-zone/parse'),
+            defaultTo1: require('default-to/1'),
+            defer: require('function/async/defer'),
+            throttle: require('function/async/throttle'),
+            bindTo: require('function/bind-to'),
+            bindWith: require('function/bind-with'),
+            bind: require('function/bind'),
+            evaluate: require('function/evaluate'),
+            extendConstructor: require('function/extend'),
+            factory: require('function/factory'),
+            flows: require('function/flows'),
+            once: require('function/once'),
+            result: require('function/result'),
+            reverseParams: require('function/reverse-params'),
+            whilst: require('function/whilst'),
+            wrapper: require('function/wrapper'),
+            wraptry: require('function/wrap-try'),
+            objectGenerator: require('generator/keys'),
+            arrayGenerator: require('generator'),
+            iterateOverPath: require('iterate/over-path'),
+            iterateIn: require('iterate/in'),
+            iterateOwn: require('iterate/own'),
+            couldBeJSON: require('JSON/could-be'),
+            cloneJSON: require('JSON/clone'),
+            parseJSON: require('JSON/parse'),
+            stringifyJSON: require('JSON/stringify'),
+            keys: require('object/keys'),
+            allKeys: require('object/keys/all'),
+            euclideanDistance: require('number/euclidean-distance'),
+            euclideanDistanceOrigin: require('number/euclidean-distance/origin'),
+            greaterThan0: require('number/greater-than/0'),
+            clamp: require('number/clamp'),
+            floatToInteger: require('number/float-to-integer'),
+            maxInteger: require('number/max-integer'),
+            maxSafeInteger: require('number/max-safe-integer'),
+            roundFloat: require('number/round-float'),
+            safeInteger: require('number/safe-integer'),
+            under1: require('number/under1'),
+            withinRange: require('number/within-range'),
+            mergeWithDeepCustomizer: require('object/merge/with-deep-customizer'),
+            mergeWithShallowCustomizer: require('object/merge/with-shallow-customizer'),
+            mergeWith: require('object/merge/with'),
+            at: require('object/at'),
+            clone: require('object/clone'),
+            create: require('object/create'),
+            extend: require('object/extend'),
+            fromPairs: require('object/from-pairs'),
+            get: require('object/get'),
+            has: require('object/has'),
+            intendedApi: require('object/intended-api'),
+            intendedIteration: require('object/intended-iteration'),
+            intendedObject: require('object/intended'),
+            invert: require('object/invert'),
+            set: require('object/set'),
+            stringify: require('object/stringify'),
+            values: require('object/values'),
+            passesFirst: require('passes/first'),
+            passesSecond: require('passes/second'),
+            performance: require('performance'),
+            performanceNow: require('performance/now'),
             returns: merge(returns, returnsHash),
-            capitalize: require('./utils/string/capitalize'),
-            stringConcat: require('./utils/string/concat'),
-            createEscaper: require('./utils/string/create-escaper'),
-            objectParse: require('./utils/string/object-parse'),
-            customUnits: require('./utils/string/units/custom'),
-            deburr: require('./utils/string/deburr'),
-            deprefix: require('./utils/string/deprefix'),
-            hasUnicodeWord: require('./utils/string/has-unicode-word'),
-            escapeMap: require('./utils/string/escape-map'),
-            escape: require('./utils/string/escape'),
-            pad: require('./utils/string/pad'),
-            padEnd: require('./utils/string/pad-end'),
-            padStart: require('./utils/string/pad-start'),
-            unescape: require('./utils/string/unescape'),
-            unescapeMap: require('./utils/string/unescape-map'),
-            units: require('./utils/string/units'),
-            uuid: require('./utils/string/uuid'),
-            words: require('./utils/string/words'),
-            time: require('./utils/time'),
-            indent: require('./utils/string/indent'),
-            parseURL: require('./utils/URL/parse'),
-            protocol: require('./utils/URL/protocol'),
-            protocols: require('./utils/URL/protocols'),
-            reference: require('./utils/URL/reference'),
-            stringifyQuery: require('./utils/URL/stringify-query'),
-            matchesBinary: require('./utils/object/matches/binary'),
-            matchesProperty: require('./utils/object/matches/property'),
-            matches: require('./utils/object/matches'),
-            maxVersion: require('./utils/string/max-version'),
-            baseDataTypes: require('./utils/is/base-data-types'),
-            negate: require('./utils/function/negate'),
-            property: require('./utils/object/property'),
-            noop: require('./utils/function/noop'),
-            parse: require('./utils/object/parse'),
-            type: require('./utils/string/type'),
+            capitalize: require('string/capitalize'),
+            stringConcat: require('string/concat'),
+            createEscaper: require('string/create-escaper'),
+            objectParse: require('string/object-parse'),
+            customUnits: require('string/units/custom'),
+            deburr: require('string/deburr'),
+            deprefix: require('string/deprefix'),
+            hasUnicodeWord: require('string/has-unicode-word'),
+            escapeMap: require('string/escape-map'),
+            escape: require('string/escape'),
+            pad: require('string/pad'),
+            padEnd: require('string/pad-end'),
+            padStart: require('string/pad-start'),
+            unescape: require('string/unescape'),
+            unescapeMap: require('string/unescape-map'),
+            units: require('string/units'),
+            uuid: require('string/uuid'),
+            words: require('string/words'),
+            time: require('time'),
+            indent: require('string/indent'),
+            parseURL: require('URL/parse'),
+            protocol: require('URL/protocol'),
+            protocols: require('URL/protocols'),
+            reference: require('URL/reference'),
+            stringifyQuery: require('URL/stringify-query'),
+            matchesBinary: require('object/matches/binary'),
+            matchesProperty: require('object/matches/property'),
+            matches: require('object/matches'),
+            maxVersion: require('string/max-version'),
+            baseDataTypes: require('is/base-data-types'),
+            negate: require('function/negate'),
+            property: require('object/property'),
+            noop: require('function/noop'),
+            parse: require('object/parse'),
+            type: require('string/type'),
             buildMethods: buildMethods
         },
         mapKeys(is, mapKeysPrefix('is')),
