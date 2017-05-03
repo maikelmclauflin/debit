@@ -20,7 +20,6 @@ function recreate() {
     var mapRight = require('./utils/array/map/right');
     var mapValues = require('./utils/array/map/values');
     var mapValuesRight = require('./utils/array/map/values-right');
-    var mapKeys = require('./utils/array/map/keys');
     var mapKeysRight = require('./utils/array/map/keys-right');
     var find = require('./utils/array/find');
     var findRight = require('./utils/array/find/right');
