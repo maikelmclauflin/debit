@@ -5,7 +5,8 @@
     "main": "lib/node_modules/index.js",
     "scripts": {
         "test": "nodemon --delay 0.1 lib/test.js",
-        "bundle": "browserify ./index.js -o ./bundle.js"
+        "bundle": "browserify ./index.js -o ./bundle.js",
+        "share": "npm version patch && git push && npm publish"
     },
     "repository": {
         "type": "git",
