@@ -4,7 +4,7 @@
   "description": "utilities for every day use",
   "main": "lib/node_modules/index.js",
   "scripts": {
-    "test": "nodemon --delay 0.1 lib/test.js",
+    "test": "nodemon lib/test.js",
     "bundle": "browserify ./index.js -o ./bundle.js",
     "share": "npm version patch && git push && npm publish"
   },
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/mmclau14/debit#readme",
   "devDependencies": {
-    "batterie": "^1.0.18"
+    "batterie": "^1.0.45"
   }
 }
