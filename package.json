@@ -1,6 +1,6 @@
 {
   "name": "debit",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "utilities for every day use",
   "main": "lib/node_modules/index.js",
   "scripts": {
