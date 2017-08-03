@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@timelaps/constants": "^1.0.2",
-    "@timelaps/equality": "^1.0.0",
     "@timelaps/hacks": "^1.0.0",
     "@timelaps/is": "^1.0.1",
     "@timelaps/json": "^1.0.2",
