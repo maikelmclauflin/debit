@@ -1,6 +1,6 @@
 {
   "name": "@timelaps/debit",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "utilities for every day use",
   "main": "lib/node_modules/index.js",
   "scripts": {
